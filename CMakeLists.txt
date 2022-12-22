@@ -25,7 +25,7 @@ if (${CMAKE_Fortran_COMPILER_ID} STREQUAL "GNU")
   set(CMAKE_Fortran_FLAGS
     "${CMAKE_Fortran_FLAGS} -fbounds-check -fbacktrace -fdefault-real-8 -ffree-line-length-none")
 elseif (${CMAKE_Fortran_COMPILER_ID} STREQUAL "Intel")
-  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -r8 -double_size 128")
+  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -O3 -double-size 64")
 endif()
 
 if (APPLE)
